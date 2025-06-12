@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Sebelum Melanjutkan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body 
+<body class="bg-gradient-to-r from-indigo-500 to-purple-600 h-screen flex items-center justify-center">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl w-96">
+    <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Masukan Data Yang Di Berikan</h2>
+    <div>
+      <label class="block text-gray-600 mb-2">Username</label>
+      <input id="username" type="text" class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    </div>
+    <div class="mt-4">
+      <label class="block text-gray-600 mb-2">Password</label>
+      <input id="password" type="password" class="w-full px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    </div>
+    <button onclick="login()" class="mt-6 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 rounded-xl transition duration-300">
+      Login
+    </button>
+      <h2 class="text-1 font-bold text-center mb-6 text-blue-500">Username:danz</h2>
+        <h2 class="text-1 font-bold text-center mb-6 text-blue-500">Password:danzganteng</h2>
+    <p id="error" class="mt-4 text-red-600 text-sm text-center hidden">Username atau password salah</p>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Ganti kredensial ini sesuai kebutuhan
+      if (username === "danz" && password === "danzganteng") {
+        // Redirect otomatis jika login berhasil
+        window.location.href = "https://gametemplatedanz.vercel.app";
+      } else {
+        document.getElementById("error").classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
